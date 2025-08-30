@@ -1,10 +1,5 @@
 pipeline {
-    agent {
-        docker {
-            image 'node:20-bullseye-slim'
-            args '-u root:root'
-        }
-    }
+    agent any
     environment {
         DOCKER_IMAGE = "daeryn19/history-website"
     }
