@@ -1,0 +1,104 @@
+.guest-box {
+    background-image: linear-gradient(to bottom right, #ff7e5f, #feb47b);
+    padding: 10px;
+    margin-top: 20px;
+    width: 50%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.guest-container {
+	text-align: center;
+    flex-direction: column;
+    display: flex;
+    min-height: 100vh;
+    color:#ffffff;
+    font-weight: bold;
+}
+
+.guest-header {
+	background-image: linear-gradient(to bottom right, #ff7e5f, #feb47b);
+    padding: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: white;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+.guest-header .header-title {
+    flex: 1;
+    text-align: center;
+}
+
+
+.guest-footer {
+    background-image: linear-gradient(to bottom right, #ff7e5f, #feb47b);
+    padding: 20px;
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.guest-bg {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('download.png');
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 80px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.home-button {
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    font-size: 16px;
+    background: #eee;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+	margin-bottom: 0px; /* increase space below button */
+	margin-top: 0;
+	margin-left: 0;
+	background: #eee;
+    color:#ff7e5f;
+	border: none;
+	padding: 8px 16px;
+	border-radius: 4px;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.guest-list-section {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	margin-top: 40px;
+}
+
+.guest-link {
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 18px;
+	margin-bottom: 4px;
+    font-weight: normal;
+}
