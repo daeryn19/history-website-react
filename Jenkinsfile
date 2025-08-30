@@ -1,5 +1,10 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+            image 'node:20-bullseye-slim'
+            args '-u root:root'
+        }
+    }
     environment {
         DOCKER_IMAGE = "daeryn19/history-website"
     }
@@ -11,24 +16,32 @@ pipeline {
         }
         stage('Install dependencies') {
             steps {
-                sh 'npm install --omit=dev'
+                dir('history-website') {
+                    sh 'npm install --omit=dev'
+                }
             }
         }
         stage('Build') {
             steps {
-                sh 'npm run build'
+                dir('history-website') {
+                    sh 'npm run build'
+                }
             }
         }
         stage('Docker Build') {
             steps {
-                sh 'docker build -t $DOCKER_IMAGE .'
+                dir('history-website') {
+                    sh 'docker build -t $DOCKER_IMAGE .'
+                }
             }
         }
         stage('Docker Push') {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'docker-hub-credentials', usernameVariable: 'DOCKERHUB_USER', passwordVariable: 'DOCKERHUB_PASS')]) {
-                    sh "echo $DOCKERHUB_PASS | docker login -u $DOCKERHUB_USER --password-stdin"
-                    sh "docker push $DOCKER_IMAGE"
+                    dir('history-website') {
+                        sh 'echo $DOCKERHUB_PASS | docker login -u $DOCKERHUB_USER --password-stdin'
+                        sh 'docker push $DOCKER_IMAGE'
+                    }
                 }
             }
         }
