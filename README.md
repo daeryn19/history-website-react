@@ -1,72 +1,27 @@
-# Getting Started with Create React App
+# History Website with React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a JavaScript-based website with three essential pages: Login, Signup and Main browsing page, where users can read about different historical events based on periods, region or country.
 
-## Available Scripts
+## Technologies and Functionalities
 
-In the project directory, you can run:
+The coding language used for the frontend (`index.js` and all the other pages) is JavaScript (React). The styles of the pages are defined using CSS files for each page.
 
-### `npm start`
+The backend is built using Node.js and Express. User authentication is handled with API endpoints. All registered users are stored in a MongoDB database.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Make sure that you have the required packages installed:
+    ```npm install react react-dom react-router-dom``` - for frontend
+    ```npm install express cors bcryptjs``` - for backend
+Other required dependencies should be installed after running ```npm install``` and are listed in the `package.json` file.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## CI/CD Integration
 
-### `npm test`
+- Currently, the project is being developed for including a CI/CD pipeline using Docker and Jenkins.
+- The project will automatically build and test the application on each commit.
+- Push images to Docker Hub.
+- Update the application with minimal manual involvement.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Use cases
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-# history-website-react
+- This website can be used to find out historical facts from different periods and geographical areas.
+- It provides login and signup options, but it also allows the user to access the website as a guest.
+- On the main browsing page, the user can see three lists, each for a specific filter, and can select either the period of time, the region, or the country.
