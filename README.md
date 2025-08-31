@@ -10,7 +10,7 @@ The backend is built using Node.js and Express. User authentication is handled w
 
 Make sure that you have the required packages installed:
     ```npm install react react-dom react-router-dom``` - for frontend and 
-    ```npm install express cors bcryptjs``` - for backend
+    ```npm install express cors bcryptjs``` - for backend.
 Other required dependencies should be installed after running ```npm install``` and are listed in the `package.json` file.
 
 ## CI/CD Integration
